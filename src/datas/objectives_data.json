@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Offrir un service de délégation de vote démocratique",
+    "description": "Nous avons mis en place un corps décisionnel démocratique interne, permettant à ceux qui le souhaitent de s’impliquer plus facilement dans OpenGov. \n        Pour ceux qui manquent de temps, il est possible de déléguer leur pouvoir de décision à un corps d’agents engagés, soucieux de l’intérêt de l’écosystème. \n        Ce service de délégation est déjà actif sur Polkadot et Kusama, ayant participé à plus de 80 référendums durant sa phase de déploiement.",
+    "image": "https://lenexus.4everland.store/background/back_lenexus_11.webp",
+    "button": true,
+    "buttonText": "Découvrir le service de délégation",
+    "buttonLink": "/delegate"
+  },
+  {
+    "title": "Création d’un espace Hacker Space permanent sur Paris",
+    "description": "Le Nexus sera également un espace communautaire lucratif et innovant, où les communautés Web3 et Polkadot pourront se rassembler, collaborer et innover. \n        Il joue aussi un rôle clé en tant que source principale de revenus pour financer les activités du Nexus.",
+    "image": "https://lenexus.4everland.store/background/back_lenexus_14.avif",
+    "button": true,
+    "buttonText": "Explorer la discution",
+    "buttonLink": "https://polkadot.polkassembly.io/post/2437"
+  },
+  {
+    "title": "Création d’un meetup-bounty local",
+    "description": "Dans le but de soulager OpenGov de certaines sollicitations et de renforcer l’indépendance de notre communauté. Nous envisageons de créer et financer \n        un bounty dédié aux meetups et événements locaux. Notre objectif final est d’organiser un événement Polkadot chaque semaine au sein de la francophonie à travers le monde.",
+    "image": "https://lenexus.4everland.store/background/back_lenexus_9.webp",
+    "button": false,
+    "buttonText": "",
+    "buttonLink": ""
+  },
+  {
+    "title": "Création d’un espace dédié aux développeurs francophones",
+    "description": "Dans le but de contribuer à l’amélioration de l’expérience des développeurs, une cellule dédiée a été ouverte. \n        Nous invitons tous les développeurs Web3 qui souhaitent nous rejoindre pour échanger en toute liberté, partager leurs idées et co-construire des projets au sein de notre communauté francophone.",
+    "image": "https://lenexus.4everland.store/background/back_lenexus_14.png",
+    "button": true,
+    "buttonText": "Rejoindre la communauté des développeurs",
+    "buttonLink": "https://discord.gg/entxwA7Xda"
+  },
+  {
+    "title": "Offrir une unité BizDev francophone",
+    "description": "Tout comme l'expérience utilisateur, nous sommes convaincus qu’une unité de business développements est plus efficace quand elle fonctionne dans sa langue natale. Le Nexus se veut d’être un point d’entrée de référence pour la très active communauté francophone web3.",
+    "image": "https://lenexus.4everland.store/background/back_lenexus_3.png",
+    "button": false,
+    "buttonText": "",
+    "buttonLink": ""
+  },
+  {
+    "title": "Offrir un service de délégation de nomination",
+    "description": "Parce que nos artisans validateurs ont du talent et doivent être encouragés, nous prévoyons de déployer prochainement une nomination pool sur Polkadot et Kusama, afin de faciliter le staking pour nos holders et soutenir les validateurs indépendants.",
+    "image": "https://lenexus.4everland.store/background/back_lenexus_2.png",
+    "button": false,
+    "buttonText": "",
+    "buttonLink": ""
+  }
+]

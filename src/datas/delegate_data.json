@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Polkadot",
+    "image": "https://lenexus.4everland.store/logos/Polkadot%20Token.png",
+    "description": "Déléguez vos DOT à notre adresse de délégation Le Nexus.",
+    "address": "16Gpd7FDEMR6STGyzTqKie4Xd3AXWNCjr6K8W8kSaG1r4VTQ",
+    "buttonLink": "https://delegit.xyz/polkadot/_le_nexus_",
+    "buttonText": "Déléguez vos DOT"
+  },
+  {
+    "title": "Kusama",
+    "image": "https://lenexus.4everland.store/logos/Kusama_black.png",
+    "description": "Déléguez vos KSM à notre adresse de délégation Le Nexus.",
+    "address": "HYmYudY1cxN6XyY98dd82TckYF2YiPFc6sXmHqMoKifGAje",
+    "buttonLink": "https://delegit.xyz/kusama/_le_nexus_",
+    "buttonText": "Déléguez vos KSM"
+  }
+]
