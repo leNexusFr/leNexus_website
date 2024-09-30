@@ -5,6 +5,7 @@ import {
   FaLinkedin,
   FaTelegram,
   FaMedium,
+  FaGithub,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -78,17 +79,31 @@ function Footer() {
         >
           <FaMedium size={24} />
         </Link>
+        <Link
+          href="https://github.com/leNexusFr"
+          target="_blank"
+          rel="noopener noreferrer"
+          mx={2}
+        >
+          <FaGithub size={24} />
+        </Link>
       </Flex>
+      <Link
+        href="https://github.com/leNexusFr/leNexus_Branding_Kit/tree/main"
+        target="_blank"
+        rel="noopener noreferrer"
+        mx={2}
+      >
+        Branding KIT
+      </Link>
       <Text fontSize={{ base: "sm", md: "sm" }}>
         <br />
         &copy; 2024 Le Nexus. Tous droits réservés.
       </Text>
-
-      {/* Section "Secured by" responsive avec lien */}
       <Flex
         position={{ base: "relative", md: "absolute" }}
-        bottom={{ base: 0, md: 4 }}
-        right={{ base: "auto", md: 4 }}
+        bottom={{ base: 0, md: 8 }}
+        right={{ base: "auto", md: 6 }}
         mt={{ base: 0, md: 0 }}
         justifyContent="center"
         alignItems="center"
