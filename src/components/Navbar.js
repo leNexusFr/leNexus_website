@@ -57,9 +57,10 @@ function Navbar() {
               handleNavigate("/", null);
               closeMenu();
             }}
+            display={{ base: "none", md: "block" }}
           >
             <Image
-              src="https://lenexus.4everland.store/logos/Nexus_logo.png"
+              src="https://lenexus.4everland.store/le_nexus/Public%20-%20Le%20Nexus%20(brandkit)/logo%20(empty%20_Le%20Nexus_)/Color/background%20logo/logo-color-white-background.png"
               alt="Le Nexus Logo"
               boxSize="50px"
             />
