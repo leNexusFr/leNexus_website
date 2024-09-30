@@ -52,21 +52,22 @@ function Navbar() {
     >
       <Flex justify="space-between" align="center">
         <Flex align="center">
+          {/* Le logo est visible sur mobile uniquement quand le menu n'est pas ouvert */}
           <Link
             onClick={() => {
               handleNavigate("/", null);
               closeMenu();
             }}
-            display={{ base: "none", md: "block" }}
+            display={{ base: isOpen ? "none" : "block", md: "block" }} // Logo is hidden when menu is open on mobile
           >
             <Image
-              src="https://lenexus.4everland.store/le_nexus/Public%20-%20Le%20Nexus%20(brandkit)/logo%20(empty%20_Le%20Nexus_)/Color/background%20logo/logo-color-white-background.png"
+              src="https://lenexus.4everland.store/logos/Nexus_logo.png"
               alt="Le Nexus Logo"
               boxSize="50px"
             />
           </Link>
           <Box
-            display={{ base: "none", md: "block" }}
+            display={{ base: "none", md: "block" }} // Logo text hidden on mobile
             ml={3}
             fontWeight="bold"
             fontSize="lg"
