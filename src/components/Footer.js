@@ -54,7 +54,7 @@ function Footer() {
           <FaLinkedin size={24} />
         </Link>
         <Link
-          href="https://t.me/lenexus_org"
+          href="https://t.me/leNexus_DV"
           target="_blank"
           rel="noopener noreferrer"
           mx={2}
