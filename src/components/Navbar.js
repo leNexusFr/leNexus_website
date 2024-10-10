@@ -77,7 +77,7 @@ function Navbar() {
               closeMenu();
             }}
           >
-            Le Nexus Ouvre Ses Portes
+            Le Nexus ouvre ses portes
           </Box>
         </Flex>
 

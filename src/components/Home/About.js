@@ -44,7 +44,7 @@ function About() {
           >
             Nous pensons que l’avenir d’OpenGov et de Polkadot repose sur la
             capacité des communautés locales à s’organiser, s’éduquer et se
-            synchroniser, afin de devenir des acteurs clés et des forces de
+            synchroniser, afin de devenir des acteurs clé et des forces de
             proposition au sein de l’écosystème.
           </Text>
           <Text
@@ -64,7 +64,7 @@ function About() {
             Fortement inspiré par ChaosDAO, mais avec une approche plus ouverte,
             Le Nexus est conçu pour être dirigé par sa communauté. Sa
             trajectoire sera déterminée par ses membres, tout en reposant sur
-            des objectifs identifiés dès sa création
+            des objectifs identifiés dès sa création.
           </Text>
         </Box>
 
