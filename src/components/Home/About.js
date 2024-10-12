@@ -34,37 +34,40 @@ function About() {
             mb={4}
             textAlign={{ base: "center", md: "left" }}
           >
-            Nous sommes ravis d’annoncer la création du “Le Nexus”, un espace
-            dédié à la communauté francophone au sein de l’écosystème Polkadot.
+            Nous sommes enchantés de vous annoncer la création de "Le Nexus", un
+            espace entièrement dédié à la communauté francophone au sein de
+            l’écosystème Polkadot.
           </Text>
           <Text
             fontSize={{ base: "md", md: "md" }}
             mb={4}
             textAlign={{ base: "center", md: "left" }}
           >
-            Nous pensons que l’avenir d’OpenGov et de Polkadot repose sur la
-            capacité des communautés locales à s’organiser, s’éduquer et se
-            synchroniser, afin de devenir des acteurs clé et des forces de
-            proposition au sein de l’écosystème.
+            Nous sommes convaincus que l'avenir de Polkadot et de son modèle
+            OpenGov repose sur la capacité des communautés locales à
+            s'organiser, s'éduquer et se coordonner pour devenir des acteurs
+            clés et des forces de proposition incontournables dans cet univers.
           </Text>
           <Text
             fontSize={{ base: "md", md: "md" }}
             mb={4}
             textAlign={{ base: "center", md: "left" }}
           >
-            Le Nexus a été créé avec l'ambition de devenir à la fois une force
-            d’influence majeure dans OpenGov et un modèle inspirant pour
-            d’autres communautés, les encourageant à suivre le même chemin.
+            Le Nexus a été fondé avec une ambition claire : devenir non
+            seulement une force d'influence majeure dans OpenGov, mais aussi un
+            modèle inspirant pour les autres communautés, les incitant à
+            emboîter le pas.
           </Text>
           <Text
             fontSize={{ base: "md", md: "md" }}
             mb={4}
             textAlign={{ base: "center", md: "left" }}
           >
-            Fortement inspiré par ChaosDAO, mais avec une approche plus ouverte,
-            Le Nexus est conçu pour être dirigé par sa communauté. Sa
-            trajectoire sera déterminée par ses membres, tout en reposant sur
-            des objectifs identifiés dès sa création.
+            Inspiré par l'esprit de ChaosDAO, mais avec une approche résolument
+            plus ouverte, Le Nexus est pensé pour être dirigé par et pour la
+            communauté. Ce sont ses membres qui traceront sa trajectoire, tout
+            en s’appuyant sur des objectifs clairs définis dès le départ, pour
+            garantir un développement cohérent et inclusif.
           </Text>
         </Box>
 
@@ -74,7 +77,7 @@ function About() {
             alt="Polkadot illustration"
             borderRadius="lg"
             boxShadow="lg"
-            maxH={{ base: "200px", md: "400px" }}
+            maxH={{ base: "350px", md: "450px" }}
             objectFit="cover"
             mx="auto"
           />
