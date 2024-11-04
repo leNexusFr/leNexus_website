@@ -88,14 +88,30 @@ function Footer() {
           <FaGithub size={24} />
         </Link>
       </Flex>
-      <Link
-        href="https://github.com/leNexusFr/leNexus_Branding_Kit/tree/main"
-        target="_blank"
-        rel="noopener noreferrer"
-        mx={2}
+      <Flex
+        justifyContent="center"
+        alignItems="center"
+        direction={{ base: "column", md: "row" }} 
       >
-        Branding KIT
-      </Link>
+        <Link
+          href="https://lenexus-gov.notion.site"
+          target="_blank"
+          rel="noopener noreferrer"
+          mx={2}
+        >
+          OpenGov Report
+        </Link>
+        <Text display={{ base: "none", md: "inline" }} mx={2}>|</Text>
+        <Link
+          href="https://github.com/leNexusFr/leNexus_Branding_Kit/tree/main"
+          target="_blank"
+          rel="noopener noreferrer"
+          mx={2}
+        >
+          Branding KIT
+        </Link>
+      </Flex>
+      
       <Text fontSize={{ base: "sm", md: "sm" }}>
         <br />
         &copy; 2024 Le Nexus. Tous droits réservés.
