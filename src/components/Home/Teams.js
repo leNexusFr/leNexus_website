@@ -19,12 +19,14 @@ function Teams() {
 
   return (
     <Box
+      as="section"
       id="teams"
       py={20}
       px={8}
       bg="white"
       minHeight="100vh"
       textAlign="center"
+      aria-label="Section présentant l'équipe de Le Nexus"
     >
       <Heading
         as="h2"
@@ -48,8 +50,10 @@ function Teams() {
 
           return (
             <GridItem
+              as="article"
               key={index}
-              colSpan={isLastCard ? { base: 1, sm: 1, md: 3 } : 1} 
+              colSpan={isLastCard ? { base: 1, sm: 1, md: 3 } : 1}
+              aria-labelledby={`team-member-${index}-name`}
             >
               <VStack
                 bg="gray.50"
@@ -72,7 +76,7 @@ function Teams() {
                 >
                   <Image
                     src={member.image}
-                    alt={member.name}
+                    alt={`Portrait de ${member.name}, membre de l'équipe`}
                     borderRadius="full"
                     boxSize="120px"
                     objectFit="cover"
@@ -85,6 +89,7 @@ function Teams() {
                   size="md"
                   fontWeight="semibold"
                   color="gray.700"
+                  id={`team-member-${index}-name`}
                 >
                   {member.name}
                 </Heading>
@@ -98,7 +103,7 @@ function Teams() {
 
                 <Box>
                   {member.linkX && (
-                    <Link href={member.linkX} isExternal>
+                    <Link href={member.linkX} isExternal aria-label={`Profil Twitter de ${member.name}`}>
                       <IconButton
                         icon={<FaXTwitter />}
                         aria-label="Twitter"
@@ -109,7 +114,7 @@ function Teams() {
                     </Link>
                   )}
                   {member.linkedin && (
-                    <Link href={member.linkedin} isExternal>
+                    <Link href={member.linkedin} isExternal aria-label={`Profil LinkedIn de ${member.name}`}>
                       <IconButton
                         icon={<FaLinkedin />}
                         aria-label="LinkedIn"

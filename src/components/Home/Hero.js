@@ -3,6 +3,7 @@ import { Box, Heading, Button } from "@chakra-ui/react";
 function Hero() {
   return (
     <Box
+      as="header"
       h={{ base: "60vh", md: "50vh" }}
       bgImage="url('https://lenexus.4everland.store/background/back_lenexus_10.webp')"
       bgSize="cover"
@@ -14,6 +15,7 @@ function Hero() {
       color="white"
       textAlign="center"
       mt="80px"
+      aria-label="Section d'accueil de Le Nexus"
     >
       <Heading fontSize={{ base: "2xl", md: "5xl" }} fontWeight="bold">
         Le Nouveau Phare Francophone de Polkadot !
@@ -28,6 +30,7 @@ function Hero() {
         bgGradient="linear(to-r, #EB16C9, #DCEE10)"
         color="white"
         _hover={{ bgGradient: "linear(to-r, #DCEE10, #EB16C9)" }}
+        aria-label="Rejoindre le Nexus sur Discord"
       >
         Rejoindre le Nexus
       </Button>

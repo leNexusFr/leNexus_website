@@ -7,6 +7,7 @@ import {
   Collapse,
   useDisclosure,
   useColorModeValue,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import { useState, useRef, useEffect } from "react";
 import { HamburgerIcon, ChevronDownIcon, CloseIcon } from "@chakra-ui/icons";
@@ -21,6 +22,8 @@ function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const isMobile = useBreakpointValue({ base: true, md: false });
+
   useEffect(() => {
     const handleOutsideClick = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -34,7 +37,6 @@ function Navbar() {
   }, [onClose]);
 
   const handleNavigate = (path, section) => {
-
     if (location.pathname !== path) {
       navigate(path);
       setTimeout(() => {
@@ -55,21 +57,20 @@ function Navbar() {
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-
     onClose(); 
   };
 
   const handleMouseEnter = (menu) => {
-    setOpenSubMenu(menu); 
+    if (!isMobile) setOpenSubMenu(menu); 
   };
 
   const handleMouseLeave = () => {
-    setOpenSubMenu(null);
+    if (!isMobile) setOpenSubMenu(null);
   };
 
   return (
     <Box
-      as="nav"
+      as="header"
       p={4}
       bg={useColorModeValue("white", "gray.800")}
       boxShadow="md"
@@ -85,6 +86,7 @@ function Navbar() {
           <Link
             onClick={() => handleNavigate("/", null)}
             display={{ base: isOpen ? "none" : "block", md: "block" }}
+            aria-label="Accueil Le Nexus"
           >
             <Image
               src="https://lenexus.4everland.store/logos/Nexus_logo.png"
@@ -104,7 +106,6 @@ function Navbar() {
           </Box>
         </Flex>
 
-        {/* Hamburger icon for mobile */}
         <IconButton
           display={{ base: "block", md: "none" }}
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -112,21 +113,24 @@ function Navbar() {
           aria-label="Toggle navigation"
           bg="transparent"
           _hover={{ bg: "gray.100" }}
+          aria-expanded={isOpen}
         />
 
         <Flex
           ref={menuRef}
+          as="nav"
           direction={{ base: "column", md: "row" }}
           display={{ base: isOpen ? "flex" : "none", md: "flex" }}
           justify="space-between"
           alignItems="center"
           w={{ base: "100%", md: "auto" }}
           mt={{ base: 4, md: 0 }}
+          role="menubar"
         >
           <Box
             position="relative"
-            onMouseEnter={() => !isOpen && handleMouseEnter("about")}
-            onMouseLeave={() => !isOpen && handleMouseLeave()}
+            onMouseEnter={() => handleMouseEnter("about")}
+            onMouseLeave={() => handleMouseLeave()}
             mx={4}
             display="flex"
             flexDirection="column"
@@ -136,16 +140,14 @@ function Navbar() {
               color={location.hash === "#about" ? "pink.500" : "inherit"}
               _hover={{ textDecoration: "none", color: "pink.500" }}
               onClick={() => {
-                if (isOpen) {
-                  onAboutToggle();
-                } else {
-                  handleNavigate("/", "#about");
-                }
+                isMobile ? onAboutToggle() : handleNavigate("/", "#about");
               }}
               fontWeight="bold"
               transition="color 0.2s"
               display="flex"
               alignItems="center"
+              aria-haspopup="true"
+              aria-expanded={isAboutOpen || openSubMenu === "about"}
             >
               À propos <ChevronDownIcon ml={1} />
             </Link>
@@ -159,36 +161,29 @@ function Navbar() {
                 borderRadius="md"
                 minW="150px"
                 zIndex="1001"
-                display={{ base: "block", md: "block" }}
               >
                 <Link
                   onClick={() => handleNavigate("/", "#about")}
-                  color={location.hash === "#about" ? "pink.500" : "inherit"}
                   display="block"
                   mb={2}
                   _hover={{ color: "pink.500" }}
-                  transition="color 0.2s"
                   fontSize="14px"
                 >
                   Le Nexus
                 </Link>
                 <Link
                   onClick={() => handleNavigate("/", "#objectives")}
-                  color={location.hash === "#objectives" ? "pink.500" : "inherit"}
                   display="block"
                   mb={2}
                   _hover={{ color: "pink.500" }}
-                  transition="color 0.2s"
                   fontSize="14px"
                 >
                   Nos objectifs
                 </Link>
                 <Link
                   onClick={() => handleNavigate("/", "#teams")}
-                  color={location.hash === "#teams" ? "pink.500" : "inherit"}
                   display="block"
                   _hover={{ color: "pink.500" }}
-                  transition="color 0.2s"
                   fontSize="14px"
                 >
                   Notre équipe
@@ -199,8 +194,8 @@ function Navbar() {
 
           <Box
             position="relative"
-            onMouseEnter={() => !isOpen && handleMouseEnter("opengov")}
-            onMouseLeave={() => !isOpen && handleMouseLeave()}
+            onMouseEnter={() => handleMouseEnter("opengov")}
+            onMouseLeave={() => handleMouseLeave()}
             mx={4}
             display="flex"
             flexDirection="column"
@@ -210,16 +205,14 @@ function Navbar() {
               color={location.pathname === "/delegate" ? "pink.500" : "inherit"}
               _hover={{ textDecoration: "none", color: "pink.500" }}
               onClick={() => {
-                if (isOpen) {
-                  onOpenGovToggle();
-                } else {
-                  handleNavigate("/delegate", null);
-                }
+                isMobile ? onOpenGovToggle() : handleNavigate("/delegate", null);
               }}
               fontWeight="bold"
               transition="color 0.2s"
               display="flex"
               alignItems="center"
+              aria-haspopup="true"
+              aria-expanded={isOpenGovOpen || openSubMenu === "opengov"}
             >
               OpenGov <ChevronDownIcon ml={1} />
             </Link>
@@ -233,16 +226,13 @@ function Navbar() {
                 borderRadius="md"
                 minW="150px"
                 zIndex="1001"
-                display={{ base: "block", md: "block" }}
               >
                 <Link
                   as={RouterLink}
                   to="/delegate"
-                  color={location.pathname === "/delegate" ? "pink.500" : "inherit"}
                   display="block"
                   mb={2}
                   _hover={{ color: "pink.500" }}
-                  transition="color 0.2s"
                   fontSize="14px"
                 >
                   Délégation
@@ -251,10 +241,8 @@ function Navbar() {
                   href="https://lenexus-gov.notion.site/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  color="inherit"
                   display="block"
                   _hover={{ color: "pink.500" }}
-                  transition="color 0.2s"
                   fontSize="14px"
                 >
                   Rapports

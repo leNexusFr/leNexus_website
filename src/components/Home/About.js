@@ -3,6 +3,7 @@ import { Box, Heading, Text, Flex, Image } from "@chakra-ui/react";
 function About() {
   return (
     <Box
+      as="section"
       id="about"
       py={20}
       px={{ base: 4, md: 8 }}
@@ -11,6 +12,7 @@ function About() {
       justifyContent="center"
       alignItems="center"
       minHeight="75vh"
+      aria-label="Section à propos de Le Nexus"
     >
       <Flex
         direction={{ base: "column", md: "row" }}
@@ -74,7 +76,7 @@ function About() {
         <Box flex="1" textAlign="center">
           <Image
             src="https://xcrom1.4everland.store/background/polkadot/2909bc32cf4455aea0cbf00e4a3eaeec4d456583-1528x1144.webp"
-            alt="Polkadot illustration"
+            alt="Illustration de l'écosystème Polkadot, représentant la connectivité et la gouvernance décentralisée"
             borderRadius="lg"
             boxShadow="lg"
             maxH={{ base: "350px", md: "450px" }}

@@ -8,12 +8,14 @@ const MotionBox = motion(Box);
 function Objectives() {
   return (
     <Box
+      as="section"
       id="objectives"
       py={20}
       bg="gray.50"
       position="relative"
       overflow="hidden"
       minHeight="100vh"
+      aria-label="Section des objectifs de Le Nexus"
     >
       <Heading
         as="h2"
@@ -28,6 +30,7 @@ function Objectives() {
       <Box position="relative" width="100%" maxW="1200px" mx="auto">
         {objectivesData.map((service, index) => (
           <MotionBox
+            as="article"
             key={index}
             bg="white"
             borderRadius="lg"
@@ -40,10 +43,11 @@ function Objectives() {
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.8, delay: index * 0.1 }}
             viewport={{ once: false, amount: 0.5 }}
+            aria-labelledby={`objective-${index}-title`}
           >
             <Image
               src={service.image}
-              alt={service.title}
+              alt={`Illustration de l'objectif ${service.title}`}
               width="100%"
               height="300px"
               objectFit="cover"
@@ -51,7 +55,7 @@ function Objectives() {
               mb={4}
             />
 
-            <Heading as="h3" fontSize="xl" textAlign="center">
+            <Heading as="h3" fontSize="xl" textAlign="center" id={`objective-${index}-title`}>
               {service.title}
             </Heading>
             <Text fontSize="xs" textAlign="center" mb={4} mt={4}>
@@ -69,6 +73,7 @@ function Objectives() {
                   color="white"
                   _hover={{ bgGradient: "linear(to-r, #DCEE10, #EB16C9)" }}
                   size="xs"
+                  aria-label={`En savoir plus sur ${service.title}`}
                 >
                   {service.buttonText}
                 </Button>

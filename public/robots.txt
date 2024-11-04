@@ -1,3 +1,18 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Bloquer les pages qui ne doivent pas être indexées
+Disallow: /admin/
+Disallow: /login/
+Disallow: /signup/
+Disallow: /private/
+Disallow: /temp/
+
+# Empêcher les moteurs d'indexer les fichiers sensibles
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /yarn.lock
+
+# Sitemap pour aider les moteurs de recherche à mieux explorer le site
+Sitemap: https://lenexus.org/sitemap.xml

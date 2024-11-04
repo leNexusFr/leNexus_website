@@ -9,7 +9,7 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { Footer, Navbar } from "../components";
 import delegateData from "../datas/delegate_data.json";
@@ -37,13 +37,38 @@ function DelegatePage() {
 
   return (
     <Box display="flex" flexDirection="column" minHeight="100vh">
-       <Helmet>
+      <Helmet>
         <title>Le Nexus DAO - Déléguez Vos Tokens DOT & KSM</title>
         <meta
           name="description"
-          content="Déléguez en toute confiance vos tokens DOT (Polkadot) et KSM (Kusama) avec Le Nexus. Rejoignez notre initiative de gouvernance décentralisée et découvrez nos délégués actifs, ainsi que toutes les informations pour soutenir l'écosystème blockchain."
+          content="Déléguez en toute confiance vos tokens DOT (Polkadot) et KSM (Kusama) avec Le Nexus. Rejoignez notre initiative de gouvernance décentralisée et découvrez nos délégués actifs, ainsi que toutes les informations pour soutenir l'écosystème blockchain et le web3."
+        />
+        <meta name="keywords" content="Le Nexus, DAO, Délégation, DOT, KSM, Polkadot, Kusama, blockchain, gouvernance" />
+
+        <meta property="og:title" content="Le Nexus DAO - Déléguez Vos Tokens DOT & KSM" />
+        <meta
+          property="og:description"
+          content="Découvrez comment déléguer vos tokens DOT et KSM avec Le Nexus pour soutenir la gouvernance de Polkadot et Kusama."
+        />
+        <meta
+          property="og:image"
+          content="https://lenexus.4everland.store/background/Previews_LeNexus_delegate.png"
+        />
+        <meta property="og:url" content="https://lenexus.org/delegate" />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Le Nexus DAO - Déléguez Vos Tokens DOT & KSM" />
+        <meta
+          name="twitter:description"
+          content="Déléguez vos tokens avec Le Nexus DAO pour soutenir la gouvernance décentralisée de Polkadot et Kusama."
+        />
+        <meta
+          name="twitter:image"
+          content="https://lenexus.4everland.store/background/Previews_LeNexus_delegate.png"
         />
       </Helmet>
+
       <Navbar />
       <Box
         flex="1"
@@ -75,15 +100,17 @@ function DelegatePage() {
               p={8}
               _hover={{ transform: "translateY(-10px)", boxShadow: "2xl" }}
               transition="0.4s ease-in-out"
+              as="article"
+              aria-labelledby={`delegate-${index}-title`}
             >
               <Image
                 src={delegate.image}
-                alt={delegate.title}
+                alt={`Image de ${delegate.title}`}
                 boxSize="100px"
                 mx="auto"
                 mb={4}
               />
-              <Heading as="h3" fontSize="xl" mb={4}>
+              <Heading as="h3" fontSize="xl" mb={4} id={`delegate-${index}-title`}>
                 {delegate.title}
               </Heading>
               <Text mb={4}>{delegate.description}</Text>
@@ -107,6 +134,7 @@ function DelegatePage() {
                 bgGradient="linear(to-r, #EB16C9, #DCEE10)"
                 color="white"
                 _hover={{ bgGradient: "linear(to-r, #DCEE10, #EB16C9)" }}
+                aria-label={`En savoir plus sur ${delegate.title}`}
               >
                 {delegate.buttonText}
               </Button>
