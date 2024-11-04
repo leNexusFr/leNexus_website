@@ -9,6 +9,7 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet";
 import { useState } from "react";
 import { Footer, Navbar } from "../components";
 import delegateData from "../datas/delegate_data.json";
@@ -36,6 +37,13 @@ function DelegatePage() {
 
   return (
     <Box display="flex" flexDirection="column" minHeight="100vh">
+       <Helmet>
+        <title>Le Nexus DAO - Déléguez Vos Tokens DOT & KSM</title>
+        <meta
+          name="description"
+          content="Déléguez en toute confiance vos tokens DOT (Polkadot) et KSM (Kusama) avec Le Nexus. Rejoignez notre initiative de gouvernance décentralisée et découvrez nos délégués actifs, ainsi que toutes les informations pour soutenir l'écosystème blockchain."
+        />
+      </Helmet>
       <Navbar />
       <Box
         flex="1"
@@ -51,12 +59,12 @@ function DelegatePage() {
         <Heading
           as="h1"
           fontSize={{ base: "2xl", md: "4xl" }}
-          mb={10}
+          mt={5}
+          mb={5}
           fontWeight="bold"
         >
           Déléguez vos tokens
         </Heading>
-
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} maxW="900px">
           {delegateData.map((delegate, index) => (
             <MotionBox
