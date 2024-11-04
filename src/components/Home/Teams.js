@@ -15,7 +15,6 @@ import { FaXTwitter } from "react-icons/fa6";
 import teamsData from "../../datas/teams_data.json";
 
 function Teams() {
-  // Vérifie combien de cartes restent sur la dernière ligne
   const cardsInLastRow = teamsData.length % 3;
 
   return (
@@ -38,20 +37,19 @@ function Teams() {
       </Heading>
 
       <SimpleGrid
-        columns={{ base: 1, sm: 2, md: 3 }} // 1 colonne sur mobile, 2 sur tablette, 3 sur desktop
+        columns={{ base: 1, sm: 2, md: 3 }} 
         spacing={10}
         maxW="1200px"
         mx="auto"
       >
         {teamsData.map((member, index) => {
-          // Si c'est la dernière carte unique sur une ligne, elle prend toute la largeur
           const isLastCard =
             index >= teamsData.length - cardsInLastRow && cardsInLastRow === 1;
 
           return (
             <GridItem
               key={index}
-              colSpan={isLastCard ? { base: 1, sm: 1, md: 3 } : 1} // Si une seule carte sur la dernière ligne, elle prend toute la ligne
+              colSpan={isLastCard ? { base: 1, sm: 1, md: 3 } : 1} 
             >
               <VStack
                 bg="gray.50"
