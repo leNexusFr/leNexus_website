@@ -2,17 +2,17 @@
 User-agent: *
 Allow: /
 
-# Bloquer les pages qui ne doivent pas être indexées
+# Block pages that should not be indexed
 Disallow: /admin/
 Disallow: /login/
 Disallow: /signup/
 Disallow: /private/
 Disallow: /temp/
 
-# Empêcher les moteurs d'indexer les fichiers sensibles
+# Prevent indexing of sensitive files
 Disallow: /package.json
 Disallow: /package-lock.json
 Disallow: /yarn.lock
 
-# Sitemap pour aider les moteurs de recherche à mieux explorer le site
+# Sitemap to help search engines crawl the site
 Sitemap: https://lenexus.org/sitemap.xml

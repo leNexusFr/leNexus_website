@@ -15,6 +15,7 @@ function HomePage() {
     <Box as="main">
       <Helmet>
         <title>Le Nexus DAO - Blockchain, web3 & Polkadot</title>
+        <meta name="robots" content="index, follow" />
         <meta
           name="description"
           content="Rejoignez Le Nexus DAO, une communauté dédiée à la blockchain, au web3 et à l'écosystème Polkadot. Découvrez nos objectifs, notre équipe et comment vous pouvez participer."

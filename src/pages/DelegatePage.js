@@ -39,6 +39,7 @@ function DelegatePage() {
     <Box display="flex" flexDirection="column" minHeight="100vh">
       <Helmet>
         <title>Le Nexus DAO - Déléguez Vos Tokens DOT & KSM</title>
+        <meta name="robots" content="index, follow" />
         <meta
           name="description"
           content="Déléguez en toute confiance vos tokens DOT (Polkadot) et KSM (Kusama) avec Le Nexus. Rejoignez notre initiative de gouvernance décentralisée et découvrez nos délégués actifs, ainsi que toutes les informations pour soutenir l'écosystème blockchain et le web3."
