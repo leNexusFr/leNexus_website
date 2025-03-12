@@ -54,39 +54,12 @@
     "linkX": "https://x.com/gk18_dog"
   },
   {
-    "name": "Ilo",
-    "image": "https://lenexus.4everland.store/teams/Ilo.png",
-    "description": "Strategy & Ops @ Kamea Labs",
-    "description2": "Sudent @ emlyon",
-    "description3": "",
-    "linkedin": "https://www.linkedin.com/in/iloanvalero/",
-    "linkX": "https://x.com/naooli_v"
-  },
-  {
-    "name": "Rémi Valade",
-    "image": "https://lenexus.4everland.store/teams/remi.png",
-    "description": "Marketing guy",
+    "name": "KOLkadot",
+    "image": "https://lenexus.4everland.store/teams/KOLkadot.jpg",
+    "description": "Polkadot Ambassador",
     "description2": "",
     "description3": "",
-    "linkedin": "https://www.linkedin.com/in/remivalade",
-    "linkX": "https://x.com/remivalade"
-  },
-  {
-    "name": "Jazzus",
-    "image": "https://lenexus.4everland.store/teams/Jazzus.jpg",
-    "description": "CEO @ KameaLabs",
-    "description2": "",
-    "description3": "",
-    "linkedin": "https://www.linkedin.com/in/andredibe/",
-    "linkX": "https://x.com/andre_dibe"
-  },
-  {
-    "name": "Cyphertux.eth",
-    "image": "https://lenexus.4everland.store/teams/Cyphertux.jpg",
-    "description": "Blockchain Strategy",
-    "description2": "",
-    "description3": "",
-    "linkedin": "https://www.linkedin.com/in/evrardmaxime/",
-    "linkX": "https://x.com/Cyphertux"
+    "linkedin": "",
+    "linkX": "https://x.com/Le_KOLkadot"
   }
 ]
